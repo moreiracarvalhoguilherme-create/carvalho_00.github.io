@@ -1,47 +1,39 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Minha Página</title>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png"
-          href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- RESET CSS -->
-    <link rel="stylesheet"
-          href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <!-- CSS PRINCIPAL -->
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-    <header class="hero"
-        <!--logo/nome do site-->
-        <h1 class="hero-texto">
-            Meu Site
-        </h1>
-        <p>Bem-vindo ao meu projeto </p>
+    <!-- HEADER -->
+    <header class="hero">
+        <h1 class="hero-texto">Meu Site</h1>
+        <p>Bem-vindo ao meu projeto</p>
     </header>
-    
+
     <!-- NAVBAR -->
     <nav class="navbar">
 
@@ -68,8 +60,7 @@
         <h1>Minha página</h1>
 
         <p>
-            Esta página possui modo claro e
-            modo escuro.
+            Esta página possui modo claro e modo escuro.
         </p>
 
         <button id="botaoMensagem">
@@ -82,202 +73,21 @@
 
     </main>
 
-    <!--FOOTER-->
-    <p>●2026-meu site</p>
-    <div class="redes">
-        <a href="#">
-            <img src="img/facebook.png">
-        </a>
-    </div>
-</foter>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - Meu site</p>
+
+        <div class="redes">
+            <a href="#">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+        </div>
+    </footer>
+
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
 
 </body>
 
 </html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Minha Página</title>
-    <!-FAVICON -->
-<link rel="icon" type="image/png"
-href="img/favicon.png">
-<!-GOOGLE FONTS -->
-<link rel="preconnect"
-href="https://fonts.googleapis.com"&gt;
-<link rel="preconnect"
-href="https://fonts.gstatic.com&quot;
-crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap&quot;rel="stylesheet">
-    <!-RESET CSS -->
-<link rel="stylesheet"
-href="css/reset.css">
-    <!-CSS PRINCIPAL -->
-<link rel="stylesheet"
-href="css/style.css">
-</head>
-<body>
-<!-NAVBAR -->
-<nav class="navbar">
-<div class="logo">
-   Minha Página
-</div>
-<ul class="menu">
-<li><a href="#">Início</a></li>
-<li><a href="#">Sobre</a></li>
-<li><a href="#">Serviços</a></li>
-<li><a href="#">Contato</a></li>
-</ul>
-<button id="botaoTema">
-🌙 Modo escuro
-</button>
-</nav>
-<!-CONTEÚDO PRINCIPAL -->
-<main>
-<h1>Minha página</h1>
-<p>
-   Esta página possui modo claro e modo escuro.
-</p>
-<button id="botaoMensagem">
-    Alterar texto
-</button>
-
-<p id="mensagem">
-    Texto original
-</p>
-</main>
-   <!-JAVASCRIPT -->
-<script src="script.js"></script>
-</body>
-</html>
-script.js
-   // =============================
-   // MODO ESCURO
-   // =============================
-const botaoTema =
-document.getElementById("botaoTema");
-function alternarTema() {
-document.body.classList.toggle("escuro");
-if (document.body.classList.contains("escuro")) {
-botaoTema.textContent = "☀ Modo claro";
-} els 
-{botaoTema.textContent = "🌙 Modo escuro";}
-// =============================
-// ALTERAR TEXTO
-// =============================
-const botaoMensagem =
-document.getElementById("botaoMensagem");
-const mensagem =
-document.getElementById("mensagem");
-function alterarTexto() {
-mensagem.textContent =
-"O texto foi alterado pelo JavaScript!";
-}
-botaoMensagem.addEventListener("click", alterarTexto);
-botaoTema.addEventListener("click", alternarTema);
-style.css
-/*
-================================
-CONFIGURAÇÃO GERAL
-================================
-*/
-body {
-font-family: "Poppins", sans-serif;
-background-color: white;
-color: #222;
-transition: 0.3s;
-}
-/*
-================================
-NAVBAR
-================================
-*/
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-background-color: #222;
-color: white;
-}
-/*
-================================
-LOGO
-================================
-*/
-.logo {
-font-size: 24px;
-font-weight: 700;
-}
-/*
-================================
-MENU
-================================
-*/
-.menu {
-display: flex;
-gap: 30px;
-}
-.menu a {
-color: white;
-font-size: 16px;
-font-weight: 500;
-transition: 0.3s;
-}
-.menu a:hover {
-opacity: 0.7;
-}
-/*
-================================
-BOTÕES
-================================
-*/
-button {
-padding: 10px 18px;
-border-radius: 8px;
-background-color: #eee;
-color: #222;
-transition: 0.3s;
-}
-button:hover {
-transform: scale(1.05);
-}
-/*
-================================
-CONTEÚDO
-================================
-*/
-main {
-text-align: center;
-padding: 100px 20px;
-}
-h1 {
-font-size: 40px;
-margin-bottom: 20px;
-}
-p {
-margin-bottom: 30px;
-}
-/*
-================================
-MODO ESCURO
-================================
-*/
-.escuro {
-background-color: #222;
-color: white;
-}
-.escuro .navbar {
-background-color: #111;
-}
-.escuro button {
-background-color: #444;
-color: white;
-}
+```
